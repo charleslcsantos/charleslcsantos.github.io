@@ -12,20 +12,17 @@ body {
 	background: #FAFAFA;
 }
 
-a {
-	color: #272727;
-}
-
 .info {
 	margin: 0 auto;
 	display: table;
 	text-align: center;	
-	a {
+	.button {
 		font-family: "Oswald", Helvetica, Arial;
 		text-transform: uppercase;
 		font-size: 14px;
 		padding: 20px;
 		display: block;
+		color: #272727;
 	}
 	.info-photo {
 		border: 5px solid #DCDCDC;
@@ -34,9 +31,9 @@ a {
 		height: 150px;
 		margin: 15px auto;
 		background-image: url('../img/info-photo.jpg');
-		background-size: 150px;
+		background-size: 160px;
 		background-repeat: no-repeat;
-		background-position-x: -10px;
+		background-position-x: -15px;
 	}
 	.info-name {
 		font-family: "Oswald", Helvetica, Arial;
@@ -50,6 +47,16 @@ a {
 		font-weight: 100;
 		border-bottom: 1px dotted #C7C7C7;
 		padding-bottom: 10px;
+		line-height: 5px;
+	}
+	.info-social {
+		transition: margin ease-out 0.5s;
+		a {
+			color: #FAFAFA;
+		}
+		&.portfolio--open {
+			margin-top: 320px;
+		}
 	}
 	.info-portfolio {
 		height: 0;
@@ -59,7 +66,7 @@ a {
 		width: 100%;
 		position: absolute;
 		left: 0;
-		transition: height ease .5s;
+		transition: height ease-out .5s;
 		&.portfolio--open {
 			height: 300px;
 		}
@@ -67,9 +74,5 @@ a {
 	.info-logo {
 		margin: 0 auto;
 		display: inherit;
-		transition: margin ease 0.5s;
-		&.portfolio--open {
-			margin-top: 320px;
-		}
 	}
 }
