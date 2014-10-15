@@ -1,0 +1,75 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+	background-image: url("../img/img-tt.jpg");
+	background-size: cover;
+	font-family: 'Open Sans', sans-serif !important;
+	color: #272727 !important;
+	background: #FAFAFA;
+}
+
+a {
+	color: #272727;
+}
+
+.info {
+	margin: 0 auto;
+	display: table;
+	text-align: center;	
+	a {
+		font-family: "Oswald", Helvetica, Arial;
+		text-transform: uppercase;
+		font-size: 14px;
+		padding: 20px;
+		display: block;
+	}
+	.info-photo {
+		border: 5px solid #DCDCDC;
+		border-radius: 50%;
+		width: 150px;
+		height: 150px;
+		margin: 15px auto;
+		background-image: url('../img/info-photo.jpg');
+		background-size: 150px;
+		background-repeat: no-repeat;
+		background-position-x: -10px;
+	}
+	.info-name {
+		font-family: "Oswald", Helvetica, Arial;
+		text-align: center;
+		font-weight: bold;
+		font-size: 25px;
+	}
+	.info-bio {
+		text-align: center;
+		font-size: 14px;
+		font-weight: 100;
+		border-bottom: 1px dotted #C7C7C7;
+		padding-bottom: 10px;
+	}
+	.info-portfolio {
+		height: 0;
+		text-align: center;
+		background: #F3F3F3;
+		box-shadow: inset 0px 0px 15px 0px #D7D7D7;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		transition: height ease .5s;
+		&.portfolio--open {
+			height: 300px;
+		}
+	}
+	.info-logo {
+		margin: 0 auto;
+		display: inherit;
+		transition: margin ease 0.5s;
+		&.portfolio--open {
+			margin-top: 320px;
+		}
+	}
+}
