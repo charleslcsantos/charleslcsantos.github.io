@@ -55,7 +55,7 @@ body {
 			color: #FAFAFA;
 		}
 		&.portfolio--open {
-			margin-top: 320px;
+			margin-top: 70px;
 		}
 	}
 	.info-portfolio {
@@ -66,10 +66,23 @@ body {
 		width: 100%;
 		position: absolute;
 		left: 0;
-		transition: height ease-out .5s;
-		&.portfolio--open {
-			height: 300px;
+		transition: height ease-out .3s;
+		font-size: 14px;
+		color: #9B9B9B;
+		p {
+			transition: opacity .3s;
+			opacity: 0;
 		}
+		&.portfolio--open {
+			height: 50px;
+			p {
+				color: #000;
+				opacity: 1;
+				a {
+					font-weight: 700;
+				}
+			}
+		} 
 	}
 	.info-logo {
 		margin: 0 auto;
