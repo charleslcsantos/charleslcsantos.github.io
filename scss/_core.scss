@@ -1,6 +1,9 @@
-h1 {
+$primary_color: #3f455c;
+
+h1,
+h2 {
   font-family: "Abril Fatface", cursive;
-  color: #535a77;
+  color: $primary_color;
 }
 
 .container {
@@ -11,9 +14,15 @@ h1 {
 }
 
 .wrapper {
+  height: 100vh;
   &__title {
     font-weight: normal;
-    font-size: 4em;
+    font-size: 2rem;
+  }
+  &__subtitle {
+    font-family: "Lato", sans-serif, Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+      "Helvetica Neue", sans-serif;
+    color: #888;
   }
 }
 
@@ -24,10 +33,10 @@ h1 {
   height: calc(100% - 60px);
   .wrapper__title {
     font-size: 1.5rem;
-    color: #999;
+    color: #888;
     strong {
       margin-top: 20px;
-      color: #535a77;
+      color: $primary_color;
       font-size: 3.5rem;
       line-height: 3rem;
       display: block;
@@ -42,12 +51,40 @@ h1 {
 }
 
 .social-link {
-  padding: 10px 0;
+  padding: 5px 0;
+  &__title {
+    margin: 5px 0 10px;
+    font-size: 0.8rem;
+  }
   &__item {
     width: 20px;
     height: 20px;
-    background: #999;
     display: inline-flex;
     margin-right: 5px;
+    svg {
+      width: 20px;
+      fill: #666;
+    }
+  }
+}
+
+.wrapper-about {
+  .wrapper__title {
+    padding-top: 50px;
+    position: relative;
+    &::after {
+      content: "";
+      width: 40px;
+      height: 5px;
+      background: #3f465a;
+      left: 0;
+      position: absolute;
+      bottom: -15px;
+    }
+  }
+  .wrapper__text-block {
+    line-height: 2rem;
+    font-size: 1rem;
+    padding: 50px 0 20px;
   }
 }
