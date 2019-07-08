@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Lato&display=swap");
+@import "./scss/variables";
 @import "./scss/reset";
 @import "./scss/core";
 @import "./shared/header/header";
 
 body {
   color: #999;
-  background: #f3f3f3;
+  background: #fff;
   font-family: "Lato", sans-serif, Roboto, Oxygen-Sans, Ubuntu, Cantarell,
     "Helvetica Neue", sans-serif;
   width: 100vw;

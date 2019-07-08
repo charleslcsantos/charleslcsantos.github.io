@@ -1,0 +1,14 @@
+@mixin input-placeholder {
+	&.placeholder { @content; }
+	&:-moz-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&::-webkit-input-placeholder { @content; }
+}
+
+@mixin clear_input_style {
+	background: transparent;
+	border: none;
+	box-shadow: none;
+	outline: none;
+}

@@ -1,6 +1,11 @@
+@import "./scss/mixins/responsive";
+
 .menu {
   display: flex;
   padding-top: 50px;
+  @include min-desktop-size {
+    justify-content: flex-end;
+  }
   &__item {
     text-decoration: none;
     color: #999;

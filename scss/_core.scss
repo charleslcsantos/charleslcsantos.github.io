@@ -1,3 +1,5 @@
+@import "./mixins/responsive";
+
 $primary_color: #3f455c;
 
 h1,
@@ -8,13 +10,18 @@ h2 {
 
 .container {
   max-width: 1400px;
+  width: 100%;
   padding-left: 2em;
   padding-right: 2em;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .wrapper {
   height: 100vh;
+  @include min-desktop-size {
+    padding: 0 100px;
+  }
   &__title {
     font-weight: normal;
     font-size: 2rem;
@@ -34,12 +41,20 @@ h2 {
   .wrapper__title {
     font-size: 1.5rem;
     color: #888;
+    @include min-desktop-size {
+      font-size: 2rem;
+    }
     strong {
       margin-top: 20px;
       color: $primary_color;
       font-size: 3.5rem;
       line-height: 3rem;
       display: block;
+      @include min-desktop-size {
+        font-size: 5.5rem;
+        line-height: 4.5rem;
+        width: 350px;
+      }
     }
   }
   .wrapper__subtitle {
@@ -47,6 +62,11 @@ h2 {
     line-height: 1.5rem;
     font-size: 1.1rem;
     margin-bottom: 15px;
+    @include min-desktop-size {
+      margin-top: 30px;
+      line-height: 2rem;
+      font-size: 1.5rem;
+    }
   }
 }
 
@@ -55,23 +75,60 @@ h2 {
   &__title {
     margin: 5px 0 10px;
     font-size: 0.8rem;
+    @include min-desktop-size {
+      font-size: 1rem;
+    }
   }
   &__item {
     width: 20px;
     height: 20px;
     display: inline-flex;
     margin-right: 5px;
+    @include min-desktop-size {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
+    }
     svg {
       width: 20px;
       fill: #666;
+      @include min-desktop-size {
+        width: 25px;
+      }
     }
   }
 }
 
 .wrapper-about {
+  @include min-desktop-size {
+    padding: 0;
+    display: flex;
+  }
+  .container {
+    @include min-desktop-size {
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      padding: 0 4rem;
+    }
+  }
+  .wrapper-about__photo {
+    display: none;
+    @include min-desktop-size {
+      display: inline-flex;
+      width: 50%;
+      object-fit: cover;
+      object-position: -100px;
+    }
+  }
   .wrapper__title {
     padding-top: 50px;
     position: relative;
+    @include min-desktop-size {
+      padding-top: 0;
+      font-size: 3.2rem;
+    }
     &::after {
       content: "";
       width: 40px;
@@ -87,4 +144,12 @@ h2 {
     font-size: 1rem;
     padding: 50px 0 20px;
   }
+}
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
 }
