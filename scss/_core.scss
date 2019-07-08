@@ -1,12 +1,53 @@
+h1 {
+  font-family: "Abril Fatface", cursive;
+  color: #535a77;
+}
+
 .container {
-	max-width: 1400px;
-	padding-left: 2em;
+  max-width: 1400px;
+  padding-left: 2em;
   padding-right: 2em;
   margin: 0 auto;
 }
 
-.wrapper-title {
-	font-size: 3em;
-	font-weight: 600;
-	color: #333;
+.wrapper {
+  &__title {
+    font-weight: normal;
+    font-size: 4em;
+  }
+}
+
+.wrapper-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 60px);
+  .wrapper__title {
+    font-size: 1.5rem;
+    color: #999;
+    strong {
+      margin-top: 20px;
+      color: #535a77;
+      font-size: 3.5rem;
+      line-height: 3rem;
+      display: block;
+    }
+  }
+  .wrapper__subtitle {
+    margin-top: 20px;
+    line-height: 1.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+}
+
+.social-link {
+  padding: 10px 0;
+  &__item {
+    width: 20px;
+    height: 20px;
+    background: #999;
+    display: inline-flex;
+    margin-right: 5px;
+  }
 }

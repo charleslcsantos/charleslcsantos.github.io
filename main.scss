@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif:300,400,500,600,700');
-@import 'scss/reset';
-@import 'scss/core';
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Lato&display=swap");
+@import "./scss/reset";
+@import "./scss/core";
+@import "./shared/header/header";
 
 body {
-  color: #666;
-  font-family: 'IBM Plex Serif',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,
-      Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  color: #999;
+  background: #f3f3f3;
+  font-family: "Lato", sans-serif, Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+    "Helvetica Neue", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
 }

@@ -1,0 +1,19 @@
+.menu {
+  display: flex;
+  padding-top: 50px;
+  &__item {
+    text-decoration: none;
+    color: #999;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    &::after {
+      content: " \00b7";
+      font-weight: 700;
+      margin: 0 8px;
+    }
+  }
+  li:last-child .menu__item::after {
+    content: none;
+  }
+}
