@@ -1,94 +1,139 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Charles Lennon - Porfólio</title>
-	<meta name="viewport" content="width=device-width, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
-<body>
-	<div class="info">
-		<div class="info-photo">
-		</div>
-		<div class="info-name">
-			Charles Lennon
-		</div>
-		<div class="info-bio">
-			<p>Web Developer</p>
-			<p>Get in touch charleslcsantos@gmail.com</p>
-		</div>
-		<!--<a href="#" class="button" onclick="return openPortfolio();">Work</a>
-		<div id="divPortfolio" class="info-portfolio">
-			<p>Opa! Meu portfólio ainda está sendo criado..enquanto não fica pronto, veja alguns trabalhos no meu <a href="http://dsk.daportfolio.com">antigo portfólio.</a></p>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Charles Lennon - Software Engineer</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./header.css">
+<header>
+  <div class="container">
+    <!-- <div class="logo">
+      svg
+    </div> -->
+    <ul class="menu">
+      <li>
+        <a class="menu__item" onclick="goToSection('about', event)" href="#about">About Me</a>
+      </li>
+      <li>
+        <!-- <a
+          class="menu__item"
+          href="#projects"
+          onclick="goToSection('projects', event)"
+          >Projects</a
+        > -->
+      </li>
+    </ul>
+    <!--<div class="language">
+			<a href="en/" class="language-option">EN</a>
+			<a href="pt/" class="language-option">PT</a>
 		</div>-->
-		<div id="divSocial" class="info-social">
-			<a href="http://www.behance.net/charleslcsantos">
-				<svg id="iconBehance" x="0px" y="0px" width="22px" height="16px" viewBox="0 0 22 16" enable-background="new 0 0 22 16" xml:space="preserve">
-					<g>
-						<path d="M6.38,1c0.647,0,1.231,0.057,1.765,0.174C8.676,1.289,9.129,1.48,9.512,1.741c0.377,0.262,0.672,0.61,0.883,1.048
-							c0.206,0.432,0.31,0.973,0.31,1.612c0,0.692-0.155,1.27-0.464,1.732C9.93,6.595,9.472,6.973,8.86,7.267
-							c0.833,0.243,1.45,0.671,1.859,1.28c0.411,0.613,0.612,1.346,0.612,2.206c0,0.697-0.131,1.297-0.394,1.801
-							c-0.265,0.511-0.626,0.925-1.07,1.244c-0.448,0.322-0.963,0.559-1.54,0.713c-0.57,0.154-1.162,0.231-1.768,0.231H0V1H6.38z
-							 M5.995,6.552c0.528,0,0.965-0.127,1.311-0.385c0.343-0.254,0.509-0.674,0.509-1.25c0-0.32-0.055-0.584-0.166-0.789
-							C7.534,3.923,7.382,3.762,7.189,3.65C6.999,3.533,6.783,3.452,6.534,3.409C6.288,3.36,6.031,3.341,5.767,3.341H2.98v3.211H5.995z
-							 M6.159,12.402c0.294,0,0.573-0.026,0.836-0.086c0.266-0.059,0.503-0.153,0.702-0.291c0.199-0.133,0.364-0.316,0.484-0.548
-							c0.12-0.23,0.178-0.529,0.178-0.891c0-0.708-0.196-1.211-0.587-1.517C7.382,8.767,6.86,8.618,6.219,8.618H2.98v3.784H6.159z"></path>
-						<path d="M15.579,12.356c0.403,0.4,0.986,0.601,1.74,0.601c0.543,0,1.012-0.139,1.406-0.417c0.39-0.277,0.627-0.574,0.719-0.882
-							h2.37c-0.381,1.198-0.959,2.053-1.747,2.568C19.287,14.742,18.337,15,17.229,15c-0.772,0-1.466-0.127-2.09-0.377
-							c-0.623-0.253-1.144-0.608-1.582-1.07c-0.427-0.464-0.759-1.013-0.995-1.658c-0.234-0.641-0.352-1.351-0.352-2.121
-							c0-0.744,0.122-1.439,0.362-2.081c0.244-0.645,0.582-1.201,1.026-1.667c0.445-0.469,0.973-0.839,1.588-1.11
-							c0.615-0.269,1.293-0.405,2.043-0.405c0.829,0,1.555,0.162,2.177,0.492c0.62,0.325,1.129,0.766,1.528,1.319
-							c0.399,0.551,0.683,1.182,0.861,1.889c0.176,0.706,0.238,1.443,0.187,2.215h-7.071C14.912,11.212,15.174,11.956,15.579,12.356z
-							 M18.671,7.128c-0.32-0.36-0.862-0.554-1.523-0.554c-0.43,0-0.786,0.073-1.071,0.223c-0.279,0.148-0.507,0.332-0.681,0.548
-							c-0.174,0.22-0.292,0.453-0.361,0.701c-0.069,0.242-0.11,0.462-0.123,0.656h4.379C19.227,8.006,18.992,7.491,18.671,7.128z"></path>
-						<rect x="14.362" y="1.922" width="5.485" height="1.356"></rect>
-					</g>
-				</svg>
-			</a>
-			<a href="https://www.facebook.com/charleslcsantos">
-				<svg version="1.1" id="iconFacebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
-					<path d="M4.025,5.291H5.68V4.541V3.805V3.683c0-0.708,0.018-1.802,0.533-2.479C6.755,0.487,7.5,0,8.781,0
+  </div>
+</header>
+
+<section class="wrapper wrapper-home">
+  <div class="container">
+    <h1 class="wrapper__title">Hi, I’m <strong>Charles Lennon</strong></h1>
+    <h2 class="wrapper__subtitle">
+      A <strong>Software Engineer</strong> <br>
+      & <strong>UX/UI Designer</strong>
+    </h2>
+    <div class="social-link">
+      <p class="social-link__title">Social Links</p>
+      <div class="social-link__item github">
+        <a href="https://github.com/charleslcsantos/" target="_blank">
+          <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <title>GitHub icon</title>
+            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+          </svg>
+        </a>
+      </div>
+      <div class="social-link__item behance">
+        <a href="https://www.behance.net/charleslcsantos" target="_blank">
+          <svg viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path d="M6.38,1c0.647,0,1.231,0.057,1.765,0.174C8.676,1.289,9.129,1.48,9.512,1.741c0.377,0.262,0.672,0.61,0.883,1.048
+											c0.206,0.432,0.31,0.973,0.31,1.612c0,0.692-0.155,1.27-0.464,1.732C9.93,6.595,9.472,6.973,8.86,7.267
+											c0.833,0.243,1.45,0.671,1.859,1.28c0.411,0.613,0.612,1.346,0.612,2.206c0,0.697-0.131,1.297-0.394,1.801
+											c-0.265,0.511-0.626,0.925-1.07,1.244c-0.448,0.322-0.963,0.559-1.54,0.713c-0.57,0.154-1.162,0.231-1.768,0.231H0V1H6.38z
+											 M5.995,6.552c0.528,0,0.965-0.127,1.311-0.385c0.343-0.254,0.509-0.674,0.509-1.25c0-0.32-0.055-0.584-0.166-0.789
+											C7.534,3.923,7.382,3.762,7.189,3.65C6.999,3.533,6.783,3.452,6.534,3.409C6.288,3.36,6.031,3.341,5.767,3.341H2.98v3.211H5.995z
+											 M6.159,12.402c0.294,0,0.573-0.026,0.836-0.086c0.266-0.059,0.503-0.153,0.702-0.291c0.199-0.133,0.364-0.316,0.484-0.548
+											c0.12-0.23,0.178-0.529,0.178-0.891c0-0.708-0.196-1.211-0.587-1.517C7.382,8.767,6.86,8.618,6.219,8.618H2.98v3.784H6.159z"></path>
+              <path d="M15.579,12.356c0.403,0.4,0.986,0.601,1.74,0.601c0.543,0,1.012-0.139,1.406-0.417c0.39-0.277,0.627-0.574,0.719-0.882
+											h2.37c-0.381,1.198-0.959,2.053-1.747,2.568C19.287,14.742,18.337,15,17.229,15c-0.772,0-1.466-0.127-2.09-0.377
+											c-0.623-0.253-1.144-0.608-1.582-1.07c-0.427-0.464-0.759-1.013-0.995-1.658c-0.234-0.641-0.352-1.351-0.352-2.121
+											c0-0.744,0.122-1.439,0.362-2.081c0.244-0.645,0.582-1.201,1.026-1.667c0.445-0.469,0.973-0.839,1.588-1.11
+											c0.615-0.269,1.293-0.405,2.043-0.405c0.829,0,1.555,0.162,2.177,0.492c0.62,0.325,1.129,0.766,1.528,1.319
+											c0.399,0.551,0.683,1.182,0.861,1.889c0.176,0.706,0.238,1.443,0.187,2.215h-7.071C14.912,11.212,15.174,11.956,15.579,12.356z
+											 M18.671,7.128c-0.32-0.36-0.862-0.554-1.523-0.554c-0.43,0-0.786,0.073-1.071,0.223c-0.279,0.148-0.507,0.332-0.681,0.548
+											c-0.174,0.22-0.292,0.453-0.361,0.701c-0.069,0.242-0.11,0.462-0.123,0.656h4.379C19.227,8.006,18.992,7.491,18.671,7.128z"></path>
+              <rect x="14.362" y="1.922" width="5.485" height="1.356"></rect>
+            </g>
+          </svg>
+        </a>
+      </div>
+      <div class="social-link__item facebook">
+        <a href="https://www.facebook.com/charleslcsantos" target="_blank">
+          <svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+            <path d="M4.025,5.291H5.68V4.541V3.805V3.683c0-0.708,0.018-1.802,0.533-2.479C6.755,0.487,7.5,0,8.781,0
 						c2.087,0,2.966,0.297,2.966,0.297l-0.414,2.451c0,0-0.689-0.199-1.333-0.199c-0.643,0-1.219,0.23-1.219,0.873v0.26v0.858v0.751
 						h2.638l-0.184,2.393H8.781V16H5.68V7.684H4.025V5.291"></path>
-				</svg>
-			</a>
-		</div>
-		<div id="divLogo" class="info-logo">
-			<img src="img/logo.svg" alt="">
-		</div>
-	</div>
-	
+          </svg>
+        </a>
+      </div>
+      <div class="social-link__item instagram">
+        <a href="https://instagram.com/oxecharles/" target="_blank">
+          <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <title>Instagram icon</title>
+            <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+          </svg>
+        </a>
+      </div>
+      <div class="social-link__item linkedin"></div>
+    </div>
+  </div>
+</section>
 
-	<script>
-		var divLogo = document.getElementById('divLogo');
-		var divSocial = document.getElementById('divSocial');
-		var divPortfolio = document.getElementById('divPortfolio');
-		function openPortfolio () { 
-			if(hasClass(divLogo, 'info-logo portfolio--open')){
-				divLogo.className = "info-logo";
-				divSocial.className = "info-social";
-				divPortfolio.className = "info-portfolio";
-			} else { 
-				divLogo.className = "info-logo portfolio--open";
-				divSocial.className = "info-social portfolio--open";
-				divPortfolio.className = "info-portfolio portfolio--open";
-			}
-		}
-		function hasClass(element, cls) {
-		    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
-		}
-	</script>
-
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-55780955-1', 'auto');
-	  ga('send', 'pageview');
-
-	</script>
-</body>
+<section id="about" class="wrapper wrapper-about fadeBox">
+  <div class="wrapper-about__photo"></div>
+  <div class="container">
+    <h2 class="wrapper__title">About Me</h2>
+    <p class="wrapper__text-block">
+      Creative and hyperactive, I’m always looking for new knowledge and I try
+      to be as organized as possible with the flow of constant ideas. I like to
+      keep up with date on the tools that influence my work and always try to
+      keep the environment where I am pleasant and with a lot of information and
+      experiences exchange. In love with Design and Frontend. <br>
+      Currently I work as Software Engineer and UX/UI Designer.
+    </p>
+    <div class="contact-item email">
+      Get in touch: <br>
+      <a href="mailto:charleslcsantos@gmail.com">charleslcsantos@gmail.com</a>
+    </div>
+  </div>
+</section>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
