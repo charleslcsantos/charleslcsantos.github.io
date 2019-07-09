@@ -12,6 +12,20 @@
     font-weight: 700;
     text-transform: uppercase;
     font-size: 0.9rem;
+    position: relative;
+    &:hover:before {
+      width: 40px;
+    }
+    &::before {
+      content: "";
+      bottom: -2px;
+      height: 1px;
+      width: 0;
+      background: #000000;
+      z-index: -1;
+      position: absolute;
+      transition: all ease 0.2s;
+    }
     &::after {
       content: " \00b7";
       font-weight: 700;
