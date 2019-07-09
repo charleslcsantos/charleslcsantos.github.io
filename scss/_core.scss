@@ -84,6 +84,12 @@ h2 {
     height: 20px;
     display: inline-flex;
     margin-right: 5px;
+    a:hover {
+      svg path {
+        fill: #39c4a8;
+        transition: all ease 0.2s;
+      }
+    }
     @include min-desktop-size {
       width: 25px;
       height: 25px;
